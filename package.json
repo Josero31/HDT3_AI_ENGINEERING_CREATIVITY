@@ -1,0 +1,16 @@
+{
+  "name": "parachute-faq-agent",
+  "version": "1.0.0",
+  "description": "Agente de preguntas frecuentes (RAG simple) para Parachute S.A., usando el SDK de OpenAI contra la API de Nvidia Build.",
+  "type": "module",
+  "main": "src/index.js",
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.68.0"
+  }
+}
