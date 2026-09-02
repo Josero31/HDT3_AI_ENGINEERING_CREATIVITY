@@ -32,15 +32,35 @@ cp .env.example .env
 # Edita .env y coloca tu NVIDIA_API_KEY
 ```
 
+> **Nota (Windows):** `corepack enable` necesita permisos de administrador para crear el
+> acceso directo `pnpm` en `C:\Program Files\nodejs`. Si te da un error `EPERM`, no hace
+> falta habilitarlo: usa `corepack pnpm install` y `corepack pnpm start` en su lugar (ver
+> abajo), que funcionan sin necesitar esos permisos.
+
 ### Uso
 
 ```bash
 pnpm start
 ```
 
+Si no tienes `pnpm` instalado globalmente (o el comando no se reconoce en tu terminal),
+usa en su lugar:
+
+```bash
+corepack pnpm start
+```
+
 Escribe tus preguntas sobre el evento de paracaidismo de Parachute S.A. El agente responderá
-únicamente con base en el archivo de FAQs. Para salir de la sesión, escribe `Bye` o presiona
-`Ctrl-C`.
+únicamente con base en el archivo de FAQs; si preguntas algo fuera de ese contexto (por
+ejemplo, cultura general), admitirá que no tiene esa información, tal como lo requiere el
+enunciado. Para salir de la sesión, escribe `Bye` o presiona `Ctrl-C`.
+
+### Modelo utilizado
+
+Por defecto se usa `meta/llama-3.2-11b-vision-instruct` (configurable con `NVIDIA_MODEL` en
+`.env`). No todos los modelos del catálogo de Nvidia Build están habilitados para cuentas
+gratuitas nuevas (algunos devuelven error 404 "not found for account"); este modelo fue
+verificado como funcional en el tier gratuito.
 
 ### Notas de seguridad
 
