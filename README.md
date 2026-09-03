@@ -66,3 +66,11 @@ verificado como funcional en el tier gratuito.
 
 El archivo `.env` con la API key está excluido del repositorio vía `.gitignore`. Nunca subas
 tu API key real; usa `.env.example` como plantilla.
+
+### Demostración
+
+Captura de una sesión de ejecución en terminal:
+
+![Captura de ejecución](ejecucion.png)
+
+Video de la ejecución completa: [video ejecucion.mp4](video%20ejecucion.mp4)
